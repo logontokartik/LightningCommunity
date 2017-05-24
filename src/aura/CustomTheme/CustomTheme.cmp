@@ -1,0 +1,18 @@
+<aura:component implements="forceCommunity:themeLayout">
+	
+    <!-- Pre-defined set of Napili regions to include; each must be defined as an Aura attribute -->
+    <aura:attribute name="navBar" type="Aura.Component[]"/>
+    
+    <aura:attribute name="regionA" type="Aura.Component[]"/>
+    <aura:attribute name="regionC" type="Aura.Component[]"/>
+    
+    
+    {!v.navBar}
+    
+   	{!v.regionA}
+    
+    {!v.body}
+    
+    {!v.regionC}
+    
+</aura:component>

@@ -1,0 +1,45 @@
+<aura:component implements="forceCommunity:themeLayout">
+
+    <!-- Pre-defined set of Napili regions to include; each must be defined as an Aura attribute -->
+    <aura:attribute name="navBar" type="Aura.Component[]"/>
+    <aura:attribute name="profileMenu" type="Aura.Component[]"/>
+    <aura:attribute name="omniBox" type="Aura.Component[]"/>
+
+    <aura:attribute name="companyLogoPath" type="String" default="{!$Resource.SalesforceDevelopersLogo}"/>
+    <aura:attribute name="backgroundVideoPath" type="String" default="{!$Resource.BostonThemeVideo}"/>
+
+    <!-- Register initialization handler for component -->
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+
+    <!-- Theme Layout Markup -->
+    <div class="bostonDemoThemeLayout">
+
+        <div class="bostonDemoContainer bostonDemoHome">
+
+            <div class="bostonDemoBackground">
+                <video class="bostonDemoBackgroundVideo" autoplay="autoplay" loop="loop" src="{!v.backgroundVideoPath}"></video>
+            </div>
+
+            <div class="bostonDemoHeader">
+                <div class="bostonDemoHeaderContent">
+                    <div class="bostonDemoNavBar">
+                        {!v.navBar} <!-- Designates where to insert the 'navBar' region content -->
+                    </div>
+
+                    <div class="bostonDemoProfileMenu">
+                        {!v.profileMenu} <!-- Designates where to insert the 'profileMenu' region content -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="bostonDemoSearch">
+                <img src="{!v.companyLogoPath}" class="bostonDemoCompanyLogo" />
+                {!v.omniBox}
+            </div>
+
+            <div class="bostonDemoContent">
+                {!v.body} <!-- Designates where to insert the inner page content -->
+            </div>
+        </div>
+    </div>
+</aura:component>

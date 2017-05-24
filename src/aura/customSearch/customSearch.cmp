@@ -1,0 +1,12 @@
+<aura:component implements="forceCommunity:searchInterface" access="global">
+    <div class="search">
+        <div class="search-wrapper">
+            <form class="search-form">
+                <div class="search-input-wrapper">
+                    <input class="search-input" type="text" placeholder="My Search"/>
+                </div>
+                <input type="hidden" name="language" value="en" />
+            </form>
+        </div>
+    </div>
+</aura:component>
